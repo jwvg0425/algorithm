@@ -10,14 +10,15 @@ install:
   - npm install gitbook-cli -g
 
 script:
-  - gitbook build
+  - gitbook install ./gitbook
+  - gitbook build ./gitbook
 
 deploy:
   provider: s3
   access_key_id: AWS_ACCESS_KEY
   secret_access_key: AWS_SECRET_KEY
   bucket: "algorithm.softcon.xyz"
-  local_dir: _book
+  local_dir: ./gitbook/_book
   acl: public_read
 
 notifications:
