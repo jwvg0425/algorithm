@@ -1,0 +1,12 @@
+language: node_js
+sudo: true
+
+install:
+  - npm install gitbook-cli -g
+
+script:
+  - gitbook build
+
+notifications:
+  - on_success: never
+  - on_failure: always
