@@ -15,12 +15,15 @@ script:
 
 deploy:
   provider: s3
-  access_key_id: AWS_ACCESS_KEY
-  secret_access_key: AWS_SECRET_KEY
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
   bucket: algorithm.softcon.xyz
   local_dir: ./gitbook/_book
   acl: public_read
   skip_cleanup: true
+  region: ap-northeast-2
 
 notifications:
   - on_success: never
