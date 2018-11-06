@@ -17,7 +17,7 @@ deploy:
   provider: s3
   access_key_id: AWS_ACCESS_KEY
   secret_access_key: AWS_SECRET_KEY
-  bucket: https://s3.ap-northeast-2.amazonaws.com/algorithm.softcon.xyz/
+  bucket: algorithm.softcon.xyz
   local_dir: ./gitbook/_book
   acl: public_read
   skip_cleanup: true
