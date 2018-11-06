@@ -20,6 +20,7 @@ deploy:
   bucket: "algorithm.softcon.xyz"
   local_dir: ./gitbook/_book
   acl: public_read
+  skip_cleanup: true
 
 notifications:
   - on_success: never
