@@ -1,5 +1,10 @@
 language: node_js
+node_js:
+  - "10"
 sudo: true
+
+before_install:
+  - npm i -g npm@6.2.0
 
 install:
   - npm install gitbook-cli -g
