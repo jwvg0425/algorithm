@@ -1,4 +1,3 @@
 {
-    "plugins": ["mathjax", "collapse"],
-    "output" : "./docs"
+    "plugins": ["mathjax", "collapse"]
 }
