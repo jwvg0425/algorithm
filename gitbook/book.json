@@ -1,3 +1,8 @@
 {
-    "plugins": ["katex", "collapse"]
+    "plugins": ["katex", "collapse", "disqus"],
+    "pluginsConfig" : {
+        "disqus" : {
+            "shortName": "algorithm-jwvg0425"
+        }
+    }
 }

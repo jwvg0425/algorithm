@@ -7,6 +7,7 @@
   * [조건문](posts/조건문.md)
   * [반복문](posts/반복문.md)
   * [배열](posts/배열.md)
+  * [문자열](posts/문자열.md)
   * [재귀](posts/재귀.md)
 
 * 문제 접근법
