@@ -7,6 +7,10 @@
   color: #229999;
 }
 
+.detail .dtitle:before {
+  content: "» ";
+}
+
 .detail .dtitle:hover {
   text-decoration: underline;
 }
