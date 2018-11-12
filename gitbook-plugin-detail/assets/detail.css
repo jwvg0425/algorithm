@@ -1,12 +1,8 @@
-
-.detail
-{
-  transition: height 0.3s ease-out;
+.detail {
   overflow: hidden;
 }
 
-.dtitle
-{
+.dtitle {
   cursor: pointer;
   color: #229999;
 }
@@ -15,6 +11,14 @@
   text-decoration: underline;
 }
 
+.detail:not(.dclose) .dcontent {
+  height: auto;
+  max-height: 100vh;
+  transition: height, max-height .3s ease-in-out;
+}
+
 .detail.dclose .dcontent {
-  display: none;
+  height: 0;
+  max-height: 0;
+  transition: height, max-height .3s ease-in-out;
 }
