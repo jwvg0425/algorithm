@@ -8,7 +8,8 @@
 }
 
 .detail .dtitle:before {
-  content: "» ";
+  content: "\00bb";
+  margin-right: 5px;
 }
 
 .detail .dtitle:hover {
