@@ -12,8 +12,13 @@
   text-decoration: underline;
 }
 
-.detail .dcontent {
-  max-height: 0;
-  transition: height, max-height .3s ease-in-out;
+.detail .dcontent, .detail:not(.dclose) .dcontent {
+  height: auto;
+  max-height: 100vh;
   overflow: hidden;
+  transition: height, max-height .3s ease-in-out;
+}
+
+.detail.dclose .dcontent {
+  max-height: 0 !important;
 }
