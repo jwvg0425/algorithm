@@ -1,7 +1,3 @@
-.detail {
-  overflow: hidden;
-}
-
 .detail .dtitle {
   cursor: pointer;
   color: #229999;
@@ -16,14 +12,8 @@
   text-decoration: underline;
 }
 
-.detail .dcontent, .detail:not(.dclose) .dcontent {
-  height: auto;
-  max-height: 100vh;
+.detail .dcontent {
+  max-height: 0;
   transition: height, max-height .3s ease-in-out;
-}
-
-.detail.dclose .dcontent {
-  height: 0 !important;
-  max-height: 0 !important;
-  transition: height, max-height .3s ease-in-out;
+  overflow: hidden;
 }
