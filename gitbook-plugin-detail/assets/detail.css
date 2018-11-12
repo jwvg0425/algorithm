@@ -6,6 +6,7 @@
 .detail .dtitle {
   cursor: pointer;
   color: #606060;
+  background: #f0f0f0;
   padding: 1rem 1.5rem;
   transition: 0.4s;
 }
