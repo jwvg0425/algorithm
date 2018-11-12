@@ -1,0 +1,11 @@
+{
+  "name": "gitbook-plugin-detail",
+  "version": "1.0.1",
+  "description": "detail section in gitbook document",
+  "engines": {
+    "gitbook": ">=3.x.x"
+  },
+  "gitbook": {},
+  "author": "jwvg0425",
+  "license": ""
+}

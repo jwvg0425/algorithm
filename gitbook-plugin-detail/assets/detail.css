@@ -1,0 +1,20 @@
+
+.detail
+{
+  transition: height 0.3s ease-out;
+  overflow: hidden;
+}
+
+.dtitle
+{
+  cursor: pointer;
+  color: #229999;
+}
+
+.dtitle:hover {
+  text-decoration: underline;
+}
+
+.detail.dclose .dcontent {
+  display: none;
+}
