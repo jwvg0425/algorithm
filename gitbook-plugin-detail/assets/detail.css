@@ -1,20 +1,56 @@
-
-.detail
-{
-  transition: height 0.3s ease-out;
-  overflow: hidden;
-}
-
-.dtitle
-{
+.detail .dtitle {
   cursor: pointer;
   color: #229999;
 }
 
-.dtitle:hover {
-  text-decoration: underline;
+.detail .dtitle {
+  cursor: pointer;
+  color: #606060;
+  background: #f0f0f0;
+  padding: 1rem 1.5rem;
+  transition: 0.4s;
+}
+
+.detail .dtitle:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.detail .dtitle:hover {
+  background: #d6d6d6;
+}
+
+.color-theme-1 .detail .dtitle {
+  color: #606060;
+  background: #eadead;
+}
+.color-theme-1 .detail .dtitle:after {
+  color: #777;
+}
+.color-theme-1 .detail .dtitle:hover {
+  background: #dacb88;
+}
+
+.color-theme-2 .detail .dtitle {
+  color: #eaeaea;
+  background: #373c50;
+}
+.color-theme-2 .detail .dtitle:after {
+  color: #777;
+}
+.color-theme-2 .detail .dtitle:hover {
+  background: #50566d;
+}
+
+.detail .dcontent, .detail:not(.dclose) .dcontent {
+  height: auto;
+  max-height: 100vh;
+  overflow: hidden;
+  transition: height, max-height .3s ease-in-out;
 }
 
 .detail.dclose .dcontent {
-  display: none;
+  max-height: 0 !important;
 }

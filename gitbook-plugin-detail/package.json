@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-detail",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "detail section in gitbook document",
   "engines": {
     "gitbook": ">=3.x.x"
