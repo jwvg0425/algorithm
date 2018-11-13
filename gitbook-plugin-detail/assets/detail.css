@@ -50,7 +50,7 @@
 
 .detail .dcontent, .detail:not(.dclose) .dcontent {
   height: auto;
-  max-height: 100vh;
+  max-height: 100%;
   overflow: hidden;
   transition: height, max-height .3s ease-in-out;
 }
