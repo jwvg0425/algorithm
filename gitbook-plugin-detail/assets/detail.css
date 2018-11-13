@@ -1,3 +1,7 @@
+.detail {
+  margin-bottom: 5px;
+}
+
 .detail .dtitle {
   cursor: pointer;
   color: #229999;
@@ -6,12 +10,13 @@
 .detail .dtitle {
   cursor: pointer;
   color: #606060;
+  background: #f0f0f0;
   padding: 1rem 1.5rem;
   transition: 0.4s;
 }
 
 .detail .dtitle:after {
-  content: '\002B';
+  content: '\2212';
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -48,6 +53,10 @@
   max-height: 100vh;
   overflow: hidden;
   transition: height, max-height .3s ease-in-out;
+}
+
+.detail.dclose .dtitle:after {
+  content: '\002B';
 }
 
 .detail.dclose .dcontent {
