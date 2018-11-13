@@ -14,13 +14,24 @@ module.exports = {
 }
 
 function formatter(page) {
-  page.content = page.content
-    .replace(new RegExp('<p>%d%', 'g'),
-      '<div class="detail dclose"><div class="dtitle">')
-    .replace(new RegExp('%d%</p>', 'g'),
-      '</div><div class="dcontent">')
-    .replace(new RegExp('<p>%/d%</p>', 'g'),
-      '</div></div>');
+  var expBegin = /<p>\[\[[\s\t]*detail((?:[\s\t])(.+))?[\s\t]*\]\]<\/p>/gi;
+  var expEnd = /<p>\[\[[\s\t]*\/detail[\s\t]*\]\]<\/p>/gi;
 
+  var content = page.content;
+  var begins = content.match(expBegin) || [];
+  var ends = content.match(expEnd) || [];
+
+  if( begins.length != ends.length ){
+    throw 'syntax error: pairs of detail are not matched';
+  }
+
+  begins.forEach(function(exp, i){
+      var title = exp.replace(expBegin, "$2") || 'Learn more...';
+      page.content = page.content
+        .replace(exp,
+          '<div class="detail dclose"><div class="dtitle">' + title + '</div><div class="dcontent">')
+        .replace(expEnd,
+          '</div></div>');
+  });
   return page;
 }
