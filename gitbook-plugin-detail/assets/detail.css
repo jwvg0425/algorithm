@@ -1,3 +1,7 @@
+.detail {
+  margin-bottom: 5px;
+}
+
 .detail .dtitle {
   cursor: pointer;
   color: #229999;
@@ -12,7 +16,7 @@
 }
 
 .detail .dtitle:after {
-  content: '\002B';
+  content: '\2212';
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -46,11 +50,30 @@
 
 .detail .dcontent, .detail:not(.dclose) .dcontent {
   height: auto;
-  max-height: 100vh;
+  max-height: 100%;
   overflow: hidden;
   transition: height, max-height .3s ease-in-out;
 }
 
+.detail .dcontent {
+  padding: 0 0.85em;
+  background: #fafafa;
+}
+.color-theme-1 .detail .dcontent {
+  background: #f1e8c8;
+}
+.color-theme-2 .detail .dcontent {
+  background: #1f2331;
+}
+
+.detail.dclose .dtitle:after {
+  content: '\002B';
+}
+
 .detail.dclose .dcontent {
   max-height: 0 !important;
+}
+
+.detail .dcontent>p:first-child {
+  margin-top: .85em;
 }
